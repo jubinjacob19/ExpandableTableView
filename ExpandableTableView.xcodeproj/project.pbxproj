@@ -14,6 +14,10 @@
 		77B672361C51F0BE002BA6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B672341C51F0BE002BA6EE /* LaunchScreen.storyboard */; };
 		77B672411C51F0BE002BA6EE /* ExpandableTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B672401C51F0BE002BA6EE /* ExpandableTableViewTests.swift */; };
 		77B6724C1C51F0BE002BA6EE /* ExpandableTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B6724B1C51F0BE002BA6EE /* ExpandableTableViewUITests.swift */; };
+		77B6725A1C51F0EF002BA6EE /* ExpandaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B672591C51F0EF002BA6EE /* ExpandaleTableViewController.swift */; };
+		77B6725C1C51F124002BA6EE /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B6725B1C51F124002BA6EE /* ExpandableTableViewCell.swift */; };
+		77B6725E1C51FC4A002BA6EE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 77B6725D1C51FC4A002BA6EE /* data.json */; };
+		77B672621C525CD0002BA6EE /* DisclosureIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B672611C525CD0002BA6EE /* DisclosureIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		77B672471C51F0BE002BA6EE /* ExpandableTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandableTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B6724B1C51F0BE002BA6EE /* ExpandableTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewUITests.swift; sourceTree = "<group>"; };
 		77B6724D1C51F0BE002BA6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B672591C51F0EF002BA6EE /* ExpandaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandaleTableViewController.swift; sourceTree = "<group>"; };
+		77B6725B1C51F124002BA6EE /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
+		77B6725D1C51FC4A002BA6EE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		77B672611C525CD0002BA6EE /* DisclosureIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclosureIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				77B672321C51F0BE002BA6EE /* Assets.xcassets */,
 				77B672341C51F0BE002BA6EE /* LaunchScreen.storyboard */,
 				77B672371C51F0BE002BA6EE /* Info.plist */,
+				77B672591C51F0EF002BA6EE /* ExpandaleTableViewController.swift */,
+				77B6725B1C51F124002BA6EE /* ExpandableTableViewCell.swift */,
+				77B6725D1C51FC4A002BA6EE /* data.json */,
+				77B672611C525CD0002BA6EE /* DisclosureIndicator.swift */,
 			);
 			path = ExpandableTableView;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 				77B672361C51F0BE002BA6EE /* LaunchScreen.storyboard in Resources */,
 				77B672331C51F0BE002BA6EE /* Assets.xcassets in Resources */,
 				77B672311C51F0BE002BA6EE /* Main.storyboard in Resources */,
+				77B6725E1C51FC4A002BA6EE /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B6725A1C51F0EF002BA6EE /* ExpandaleTableViewController.swift in Sources */,
 				77B6722E1C51F0BE002BA6EE /* ViewController.swift in Sources */,
 				77B6722C1C51F0BE002BA6EE /* AppDelegate.swift in Sources */,
+				77B6725C1C51F124002BA6EE /* ExpandableTableViewCell.swift in Sources */,
+				77B672621C525CD0002BA6EE /* DisclosureIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +345,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rishab Bokaria (8WAMDSUS58)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rishab Bokaria (8WAMDSUS58)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -399,7 +416,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rishab Bokaria (8WAMDSUS58)";
 				INFOPLIST_FILE = ExpandableTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = J.ExpandableTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExpandableTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = J.ExpandableTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
