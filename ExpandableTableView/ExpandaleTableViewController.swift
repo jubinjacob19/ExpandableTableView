@@ -36,10 +36,19 @@ class ExpandaleTableViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: fetch datasource json
     private func fetchQuestions() {
-        let filePath = NSBundle.mainBundle().pathForResource("data", ofType: "json")
-        let jsonData = NSData(contentsOfFile: filePath!)!
+        guard let filePath = NSBundle.mainBundle().pathForResource("data", ofType: "json") else {
+            print("File doesnot exist")
+            return
+        }
+        guard let jsonData = NSData(contentsOfFile: filePath) else  {
+            print("error parsing data from file")
+            return
+        }
         do {
-            let jsonArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments) as! [[String:String]]
+            guard let jsonArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments) as? [[String:String]] else {
+                print("json doesnot confirm to expected format")
+                return
+            }
             self.dataSourceArray = jsonArray.map({ (object) -> ItemModel in
                 return ItemModel(question: object[self.questionKey]!,answer:object[self.answerKey]!)
             })
