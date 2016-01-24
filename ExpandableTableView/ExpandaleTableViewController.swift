@@ -71,7 +71,9 @@ class ExpandaleTableViewController: UIViewController, UITableViewDataSource, UIT
     //MARK: table view datasource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : ExpandableTableViewCell = tableView.dequeueReusableCellWithIdentifier("CellID") as! ExpandableTableViewCell
+        guard let cell : ExpandableTableViewCell = tableView.dequeueReusableCellWithIdentifier("CellID") as? ExpandableTableViewCell else {
+            preconditionFailure("reusable cell not found")
+        }
         let item = self.dataSourceArray[indexPath.row]
         cell.setCellContent(item, isExpanded: self.expandedIndexPaths.contains(indexPath))
         cell.selectionStyle = UITableViewCellSelectionStyle.None
@@ -131,6 +133,7 @@ class ExpandaleTableViewController: UIViewController, UITableViewDataSource, UIT
         } // workaround to add static variables inside function in swift
         dispatch_once(&StaticStruct.onceToken) { () -> Void in
             StaticStruct.sizingCell = self.tableView.dequeueReusableCellWithIdentifier("CellID") as? ExpandableTableViewCell
+            
         }
         let item = self.dataSourceArray[indexPath.row]
         StaticStruct.sizingCell?.setCellContent(item, isExpanded: self.expandedIndexPaths.contains(indexPath))
@@ -138,7 +141,10 @@ class ExpandaleTableViewController: UIViewController, UITableViewDataSource, UIT
         StaticStruct.sizingCell?.updateConstraintsIfNeeded()
         StaticStruct.sizingCell?.setNeedsLayout()
         StaticStruct.sizingCell?.layoutIfNeeded()
-        return (StaticStruct.sizingCell?.cellContentHeight())!
+        guard let height = StaticStruct.sizingCell?.cellContentHeight() else {
+            return 0
+        }
+        return height
     }
     
 
