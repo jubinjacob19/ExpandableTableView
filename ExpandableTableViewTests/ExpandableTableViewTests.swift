@@ -2,7 +2,7 @@
 //  ExpandableTableViewTests.swift
 //  ExpandableTableViewTests
 //
-//  Created by Jubin Jacob on 22/01/16.
+//  Created by Jubin Jacob on 10/08/16.
 //  Copyright © 2016 J. All rights reserved.
 //
 

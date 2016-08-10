@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CollapsibleTableView.xcscheme_^#shared#^_</key>
+		<key>ExpandableTableView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7703E9A31D5ADA4A003F87CE</key>
+		<key>77D1750E1D5B9CD300474E55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7703E9AD1D5ADA4A003F87CE</key>
+		<key>77D175181D5B9CD300474E55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
