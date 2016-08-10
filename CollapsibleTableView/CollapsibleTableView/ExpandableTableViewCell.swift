@@ -8,9 +8,13 @@
 
 import UIKit
 
-struct ItemModel {
-    let question : String
-    let answer : String
+public struct ItemModel {
+    public let question : String
+    public let answer : String
+    public init(question:String, answer:String) {
+        self.question = question
+        self.answer = answer
+    }
 }
 
 class ExpandableTableViewCell: UITableViewCell {

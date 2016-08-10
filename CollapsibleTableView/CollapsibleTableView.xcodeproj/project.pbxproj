@@ -10,6 +10,9 @@
 		7703E9A81D5ADA4A003F87CE /* CollapsibleTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7703E9A71D5ADA4A003F87CE /* CollapsibleTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7703E9AF1D5ADA4A003F87CE /* CollapsibleTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7703E9A41D5ADA4A003F87CE /* CollapsibleTableView.framework */; };
 		7703E9B41D5ADA4A003F87CE /* CollapsibleTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703E9B31D5ADA4A003F87CE /* CollapsibleTableViewTests.swift */; };
+		7703E9BF1D5ADA9D003F87CE /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703E9BE1D5ADA9D003F87CE /* ExpandableTableViewController.swift */; };
+		7703E9C41D5ADAD4003F87CE /* DisclosureIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703E9C11D5ADAD4003F87CE /* DisclosureIndicator.swift */; };
+		7703E9C51D5ADAD4003F87CE /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703E9C21D5ADAD4003F87CE /* ExpandableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		7703E9AE1D5ADA4A003F87CE /* CollapsibleTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollapsibleTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7703E9B31D5ADA4A003F87CE /* CollapsibleTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewTests.swift; sourceTree = "<group>"; };
 		7703E9B51D5ADA4A003F87CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7703E9BE1D5ADA9D003F87CE /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
+		7703E9C11D5ADAD4003F87CE /* DisclosureIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclosureIndicator.swift; sourceTree = "<group>"; };
+		7703E9C21D5ADAD4003F87CE /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				7703E9A71D5ADA4A003F87CE /* CollapsibleTableView.h */,
 				7703E9A91D5ADA4A003F87CE /* Info.plist */,
+				7703E9BE1D5ADA9D003F87CE /* ExpandableTableViewController.swift */,
+				7703E9C11D5ADAD4003F87CE /* DisclosureIndicator.swift */,
+				7703E9C21D5ADAD4003F87CE /* ExpandableTableViewCell.swift */,
 			);
 			path = CollapsibleTableView;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7703E9C41D5ADAD4003F87CE /* DisclosureIndicator.swift in Sources */,
+				7703E9BF1D5ADA9D003F87CE /* ExpandableTableViewController.swift in Sources */,
+				7703E9C51D5ADAD4003F87CE /* ExpandableTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,28 +322,33 @@
 		7703E9B91D5ADA4A003F87CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CollapsibleTableView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = J.CollapsibleTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7703E9BA1D5ADA4A003F87CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CollapsibleTableView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = J.CollapsibleTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
