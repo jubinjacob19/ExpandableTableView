@@ -43,11 +43,6 @@ public class ExpandableTableViewController: UIViewController, UITableViewDataSou
         self.addSubviews()
     }
     
-    override public func viewDidAppear(animated: Bool) {
-        tableView.reloadData()
-    }
-    
-    
     private func addSubviews() {
         self.view.addSubview(self.tableView)
         let views = ["view":self.tableView]
