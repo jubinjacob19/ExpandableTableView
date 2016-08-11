@@ -6,7 +6,7 @@ Generic View Controller which can be used to show expandable sections in apps li
 
 # Installation with Carthage
 
-To integrate AFNetworking into your Xcode project using Carthage, specify it in your Cartfile:
+To integrate ExpandableTableView into your Xcode project using Carthage, specify it in your Cartfile:
 ```carthage
 github "jubinjacob19/ExpandableTableView"
 ```
