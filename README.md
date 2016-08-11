@@ -19,3 +19,8 @@ Initialize ExpandableTableViewController with an array of ItemModel objects
 let faqs : [ItemModel] = // fetch ItemModel from your app
 let expandableTableVC = ExpandableTableViewController(faqs: fetchQuestions())
 ```
+
+Creating Item model
+```swift
+let item = ItemModel(question: "question", answer: "answer")
+```
