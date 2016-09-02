@@ -9,16 +9,16 @@
 import UIKit
 
 enum ArrowDirection : Int {
-    case Top
-    case Bottom
+    case top
+    case bottom
 }
 
 class DisclosureIndicator: UIView {
     
     convenience init(direction:ArrowDirection) {
-        self.init(frame:CGRectZero)
+        self.init(frame:CGRect.zero)
         self.direction = direction
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
     }
     
     override init(frame: CGRect) {
@@ -32,26 +32,26 @@ class DisclosureIndicator: UIView {
     
     var direction : ArrowDirection?
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let width = rect.size.width
         let padding : CGFloat = 15
         let path = UIBezierPath()
-        path.lineJoinStyle = CGLineJoin.Round
+        path.lineJoinStyle = CGLineJoin.round
         path.lineWidth = 2.0
         
-        if(self.direction == ArrowDirection.Bottom) {
-            let origin = CGPointMake(padding/2, padding/2)
-            path.moveToPoint(origin)
-            path.addLineToPoint(CGPointMake(width/2, width-padding))
-            path.addLineToPoint(CGPointMake(width-(padding/2), padding/2))
-            UIColor.darkGrayColor().setStroke()
+        if(self.direction == ArrowDirection.bottom) {
+            let origin = CGPoint(x: padding/2, y: padding/2)
+            path.move(to: origin)
+            path.addLine(to: CGPoint(x: width/2, y: width-padding))
+            path.addLine(to: CGPoint(x: width-(padding/2), y: padding/2))
+            UIColor.darkGray.setStroke()
             path.stroke()
         }   else {
-            let origin = CGPointMake(padding/2, width - padding)
-            path.moveToPoint(origin)
-            path.addLineToPoint(CGPointMake(width/2, padding/2))
-            path.addLineToPoint(CGPointMake(width-(padding/2),width - padding))
-            UIColor.darkGrayColor().setStroke()
+            let origin = CGPoint(x: padding/2, y: width - padding)
+            path.move(to: origin)
+            path.addLine(to: CGPoint(x: width/2, y: padding/2))
+            path.addLine(to: CGPoint(x: width-(padding/2),y: width - padding))
+            UIColor.darkGray.setStroke()
             path.stroke()
         }
 

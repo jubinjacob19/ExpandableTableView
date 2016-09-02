@@ -20,44 +20,44 @@ public struct ItemModel {
 class ExpandableTableViewCell: UITableViewCell {
     
 
-    private lazy var questionLabel : UILabel = {
+    fileprivate lazy var questionLabel : UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 3
-        lbl.textColor = UIColor.blackColor()
-        lbl.font = UIFont.systemFontOfSize(13.0)
+        lbl.textColor = UIColor.black
+        lbl.font = UIFont.systemFont(ofSize: 13.0)
         return lbl
     } ()
     
-    private lazy var answerLabel : UILabel = {
+    fileprivate lazy var answerLabel : UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 0
-        lbl.textColor = UIColor.darkGrayColor()
-        lbl.font = UIFont.systemFontOfSize(11.0)
+        lbl.textColor = UIColor.darkGray
+        lbl.font = UIFont.systemFont(ofSize: 11.0)
         return lbl
     } ()
     
-    private lazy var topSpacerView : UIView = {
+    fileprivate lazy var topSpacerView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     } ()
     
-    private lazy var spacerView : UIView = {
+    fileprivate lazy var spacerView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     } ()
     
-    private lazy var bottomSpacerView : UIView = {
+    fileprivate lazy var bottomSpacerView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     } ()
     
     lazy var disclosureView : DisclosureIndicator = {
-        let view = DisclosureIndicator(direction: ArrowDirection.Bottom)
+        let view = DisclosureIndicator(direction: ArrowDirection.bottom)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     } ()
@@ -71,7 +71,7 @@ class ExpandableTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addSubviews() {
+    fileprivate func addSubviews() {
         self.contentView.addSubview(self.topSpacerView)
         self.contentView.addSubview(self.questionLabel)
         self.contentView.addSubview(self.disclosureView)
@@ -81,29 +81,29 @@ class ExpandableTableViewCell: UITableViewCell {
         self.setLayoutConstraints()
     }
     
-    private func setLayoutConstraints() {
+    fileprivate func setLayoutConstraints() {
         let views = ["qn":self.questionLabel,"ans":self.answerLabel,"view":self.spacerView,"top":self.topSpacerView,"btm":self.bottomSpacerView,"btn":self.disclosureView]
         let metrics = ["padding":10]
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(padding)-[qn]-(padding)-[btn(==32)]-(padding)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(padding)-[ans]-(padding)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[top]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[btm]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[top(==padding)][qn][view(==padding)][ans][btm(==padding)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
-        self.contentView.addConstraint(NSLayoutConstraint(item: self.disclosureView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 32))
-        self.contentView.addConstraint(NSLayoutConstraint(item: self.disclosureView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.questionLabel, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding)-[qn]-(padding)-[btn(==32)]-(padding)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding)-[ans]-(padding)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[top]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[btm]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[top(==padding)][qn][view(==padding)][ans][btm(==padding)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views))
+        self.contentView.addConstraint(NSLayoutConstraint(item: self.disclosureView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 32))
+        self.contentView.addConstraint(NSLayoutConstraint(item: self.disclosureView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self.questionLabel, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
     }
 
-    func setCellContent(item : ItemModel, isExpanded : Bool) {
+    func setCellContent(_ item : ItemModel, isExpanded : Bool) {
         self.questionLabel.text = item.question
         self.answerLabel.text = isExpanded ? item.answer : ""
-        self.disclosureView.direction = isExpanded ? ArrowDirection.Top : ArrowDirection.Bottom
+        self.disclosureView.direction = isExpanded ? ArrowDirection.top : ArrowDirection.bottom
         self.disclosureView.setNeedsDisplay()
         
     }
     
     func cellContentHeight()->CGFloat {
-        return self.questionLabel.intrinsicContentSize().height + self.answerLabel.intrinsicContentSize().height + 35.0
+        return self.questionLabel.intrinsicContentSize.height + self.answerLabel.intrinsicContentSize.height + 35.0
     }
 
 }
