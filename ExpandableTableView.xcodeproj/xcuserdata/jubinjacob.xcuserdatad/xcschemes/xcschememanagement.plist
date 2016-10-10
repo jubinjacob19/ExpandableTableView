@@ -9,9 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ExpandableTableViewDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7761704B1DA73E3C00CE32EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7761705E1DA73E3C00CE32EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>776170691DA73E3C00CE32EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>77D1750E1D5B9CD300474E55</key>
 		<dict>
 			<key>primary</key>

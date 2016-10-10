@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77D1750E1D5B9CD300474E55"
-               BuildableName = "ExpandableTableView.framework"
-               BlueprintName = "ExpandableTableView"
+               BlueprintIdentifier = "7761704B1DA73E3C00CE32EE"
+               BuildableName = "ExpandableTableViewDemo.app"
+               BlueprintName = "ExpandableTableViewDemo"
                ReferencedContainer = "container:ExpandableTableView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77D175181D5B9CD300474E55"
-               BuildableName = "ExpandableTableViewTests.xctest"
-               BlueprintName = "ExpandableTableViewTests"
+               BlueprintIdentifier = "7761705E1DA73E3C00CE32EE"
+               BuildableName = "ExpandableTableViewDemoTests.xctest"
+               BlueprintName = "ExpandableTableViewDemoTests"
+               ReferencedContainer = "container:ExpandableTableView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "776170691DA73E3C00CE32EE"
+               BuildableName = "ExpandableTableViewDemoUITests.xctest"
+               BlueprintName = "ExpandableTableViewDemoUITests"
                ReferencedContainer = "container:ExpandableTableView.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +52,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77D1750E1D5B9CD300474E55"
-            BuildableName = "ExpandableTableView.framework"
-            BlueprintName = "ExpandableTableView"
+            BlueprintIdentifier = "7761704B1DA73E3C00CE32EE"
+            BuildableName = "ExpandableTableViewDemo.app"
+            BlueprintName = "ExpandableTableViewDemo"
             ReferencedContainer = "container:ExpandableTableView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,15 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77D1750E1D5B9CD300474E55"
-            BuildableName = "ExpandableTableView.framework"
-            BlueprintName = "ExpandableTableView"
+            BlueprintIdentifier = "7761704B1DA73E3C00CE32EE"
+            BuildableName = "ExpandableTableViewDemo.app"
+            BlueprintName = "ExpandableTableViewDemo"
             ReferencedContainer = "container:ExpandableTableView.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "77D1750E1D5B9CD300474E55"
-            BuildableName = "ExpandableTableView.framework"
-            BlueprintName = "ExpandableTableView"
+            BlueprintIdentifier = "7761704B1DA73E3C00CE32EE"
+            BuildableName = "ExpandableTableViewDemo.app"
+            BlueprintName = "ExpandableTableViewDemo"
             ReferencedContainer = "container:ExpandableTableView.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
